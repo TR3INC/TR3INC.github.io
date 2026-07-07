@@ -1,104 +1,24 @@
-
-// ====================
-// AOS
-// ====================
-
-AOS.init({
-
-    duration:1000,
-
-    once:true
-
-});
+AOS.init();
 
 
-// ====================
-// Typed.js
-// ====================
+var typed = new Typed(".typing", {
 
-new Typed(".typing",{
-
-    strings:[
-
+    strings: [
         "Cybersecurity Researcher",
-
         "Computer Scientist",
-
-        "Tech Repair Specialist",
-
-        "Server Administrator"
-
+        "IT Repair Specialist",
+        "Technology Enthusiast"
     ],
 
-    typeSpeed:70,
-
-    backSpeed:50,
-
-    backDelay:1500,
-
-    loop:true
+    typeSpeed: 70,
+    backSpeed: 40,
+    loop: true
 
 });
 
 
-// ====================
-// Particles
-// ====================
 
-particlesJS("particles-js", {
-
-    particles: {
-
-        number: {
-
-            value: 80
-
-        },
-
-        color: {
-
-            value:"#00BFFF"
-
-        },
-
-        shape:{
-
-            type:"circle"
-
-        },
-
-        opacity:{
-
-            value:0.5
-
-        },
-
-        size:{
-
-            value:3
-
-        },
-
-        line_linked:{
-
-            enable:true,
-
-            distance:150,
-
-            color:"#00BFFF",
-
-            opacity:0.3
-
-        },
-
-        move:{
-
-            enable:true,
-
-            speed:2
-
-        }
-
-    }
-
-});
+particlesJS.load(
+    "particles-js",
+    "particles.json"
+);
