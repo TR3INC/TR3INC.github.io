@@ -5,7 +5,6 @@ var typed = new Typed(".typing", {
 
     strings: [
         "Cybersecurity Researcher",
-        "Madden/NCAA Belt Applier",
         "Computer Scientist",
         "IT Repair Specialist",
         "Technology Enthusiast"
