@@ -366,21 +366,63 @@ Book a Repair
 
 </h2>
 
-<form>
+<form action="https://formspree.io/f/mpqgegyo" method="POST">
 
-<input type="text" placeholder="Full Name">
+    <input 
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required>
 
-<input type="email" placeholder="Email">
 
-<input type="text" placeholder="Device">
+    <input 
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
 
-<textarea placeholder="Describe the issue"></textarea>
 
-<button>
+    <input 
+        type="tel"
+        name="phone"
+        placeholder="Phone Number">
 
-Submit
 
-</button>
+    <select name="device">
+
+        <option value="Computer">
+            Computer
+        </option>
+
+        <option value="Laptop">
+            Laptop
+        </option>
+
+        <option value="Phone">
+            Phone
+        </option>
+
+        <option value="Apple Watch">
+            Apple Watch
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+
+    <textarea
+        name="message"
+        placeholder="Describe the problem"
+        required>
+    </textarea>
+
+
+    <button type="submit">
+        Submit Repair Request
+    </button>
 
 </form>
 
