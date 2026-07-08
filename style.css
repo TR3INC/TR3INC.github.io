@@ -591,6 +591,40 @@ section h2 {
 
 
 
+.project-link {
+
+    display: inline-block;
+
+    margin: 0 20px 20px;
+
+    padding: 10px 20px;
+
+    background: #38bdf8;
+
+    color: #020617;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+
+.project-link:hover {
+
+    background: #0ea5e9;
+
+    transform: translateX(5px);
+
+}
+
+
+
 .project:hover {
 
     transform:translateY(-12px);
