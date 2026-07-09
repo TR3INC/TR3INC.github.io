@@ -123,7 +123,19 @@ nav {
 
     z-index: 1000;
 
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+
+}
+
+
+
+nav.hide-nav {
+
+    top: -100px;
+
+    opacity: 0;
+
+    pointer-events: none;
 
 }
 
@@ -830,6 +842,300 @@ section h2 {
     box-shadow: 0 0 25px var(--accent-glow);
 
 }
+
+
+
+/* Tech For Sale Section */
+
+.sale-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+
+}
+
+
+
+.sale-card {
+
+    background: var(--bg-tertiary);
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: var(--border);
+
+    transition: .3s;
+
+}
+
+
+
+.sale-card h3 {
+
+    color: var(--text-primary);
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+}
+
+
+
+.sale-card .price {
+
+    color: var(--accent);
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin: 15px 0;
+
+}
+
+
+
+.sale-card .description {
+
+    color: var(--text-secondary);
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.interested-btn {
+
+    padding: 12px 25px;
+
+    background: var(--accent);
+
+    color: var(--bg-primary);
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    font-size: 14px;
+
+}
+
+
+
+.interested-btn:hover {
+
+    background: var(--accent-alt);
+
+    transform: translateY(-3px);
+
+}
+
+
+
+.sale-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 30px var(--accent-glow);
+
+    border-color: var(--accent);
+
+}
+
+
+
+/* Modal */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 2000;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    animation: fadeIn 0.3s;
+
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+.modal-content {
+
+    background: var(--bg-secondary);
+
+    margin: 5% auto;
+
+    padding: 40px;
+
+    border: var(--border);
+
+    border-radius: 20px;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    position: relative;
+
+    animation: slideIn 0.3s;
+
+}
+
+
+
+@keyframes slideIn {
+
+    from {
+
+        transform: translateY(-50px);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+.close {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 20px;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    transition: color 0.3s;
+
+}
+
+
+
+.close:hover {
+
+    color: var(--accent);
+
+}
+
+
+
+.modal-content h3 {
+
+    color: var(--accent);
+
+    margin-bottom: 25px;
+
+    font-size: 24px;
+
+}
+
+
+
+.modal-content form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+
+.modal-content input,
+
+.modal-content textarea {
+
+    padding: 12px 15px;
+
+    background: var(--bg-input);
+
+    border: 1px solid var(--accent-light);
+
+    border-radius: 8px;
+
+    color: var(--text-primary);
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    transition: .3s;
+
+}
+
+
+
+.modal-content input:focus,
+
+.modal-content textarea:focus {
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 10px var(--accent-glow);
+
+    outline: none;
 
 }
 

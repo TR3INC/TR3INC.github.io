@@ -44,6 +44,8 @@
 
         <li><a href="#repair">Repair</a></li>
 
+        <li><a href="#tech-sale">Tech Sale</a></li>
+
         <li><a href="#contact">Contact</a></li>
 
     </ul>
@@ -373,6 +375,105 @@ Repair Services
 </div>
 
 </section>
+
+<section id="tech-sale">
+
+<div class="container">
+
+<h2>Tech For Sale</h2>
+
+<div class="sale-grid">
+
+<div class="sale-card">
+
+<h3>iPad 11" with A16</h3>
+
+<p class="price">$450</p>
+
+<p class="description">2025 Model - Excellent condition - Open to negotiation</p>
+
+<button class="interested-btn" onclick="openInterestModal('iPad 11&quot; with A16', 450)">I'm Interested</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Interest Modal -->
+<div id="interestModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeInterestModal()">&times;</span>
+
+<h3>Interested in <span id="itemName"></span>?</h3>
+
+<form action="https://formspree.io/f/mwvdgeno" method="POST">
+
+<input type="hidden" name="item" id="modalItem">
+
+<input type="hidden" name="asking_price" id="modalPrice">
+
+<input 
+
+type="text"
+
+name="name"
+
+placeholder="Your Name"
+
+required>
+
+<input 
+
+type="email"
+
+name="email"
+
+placeholder="Your Email"
+
+required>
+
+<input 
+
+type="tel"
+
+name="phone"
+
+placeholder="Phone Number"
+
+required>
+
+<input 
+
+type="number"
+
+name="offer_price"
+
+placeholder="Price You're Willing to Pay"
+
+step="0.01"
+
+required>
+
+<textarea
+
+name="message"
+
+placeholder="Additional notes (optional)"
+
+rows="4"></textarea>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+</div>
+
+</div>
 
 <section id="contact">
 

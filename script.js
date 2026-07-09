@@ -48,3 +48,44 @@ themeToggle.addEventListener('click', function() {
     localStorage.setItem('theme', theme);
     updateThemeIcon(isLightMode ? 'sun' : 'moon');
 });
+
+
+// Navbar Hide/Show on Scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector('nav');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scrolling DOWN - hide navbar
+        navbar.classList.add('hide-nav');
+    } else {
+        // Scrolling UP - show navbar
+        navbar.classList.remove('hide-nav');
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+
+// Tech For Sale Modal
+function openInterestModal(itemName, price) {
+    const modal = document.getElementById('interestModal');
+    document.getElementById('itemName').textContent = itemName;
+    document.getElementById('modalItem').value = itemName;
+    document.getElementById('modalPrice').value = price;
+    modal.style.display = 'block';
+}
+
+function closeInterestModal() {
+    const modal = document.getElementById('interestModal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('interestModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});
